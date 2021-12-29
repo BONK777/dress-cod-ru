@@ -2,48 +2,48 @@ extends layout
 
 block body
     div.box1
-        h2= title
+        h2#hcss &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &tcy;&ocy;&vcy;&acy;&rcy;
         div.items
-            form#addProduct(method="POST")
-                span Название товара 
-                input(type="text" name="name" placeholder="Название товара")
-                br
-                span Брэнд 
-                input(type="text" name="brand" placeholder="Брэнд")
-                br
-                span цена 
-                input(type="text" name="price" placeholder="цена")
-                br
-                span категория 
-                select(name="cat")
-                    option(value="SHORT") Шорты
-                    option(value="T-SHIRT") Футболки
-                    option(value="TROUSERS") Штаны
-                    option(value="JACKET") Куртки
-                    option(value="SWEATERS") Свитеры
-                    option(value="HODDIES") Худи
-                    option(value="TROUSERS") Брюки
-                br
-                span Размер 
-                select(name="s")
-                    option(value="S") S
-                    option(value="M") M
-                    option(value="L") L
-                    option(value="L") XL
-                    option(value="L") XXL
-                br
-                span Цвет 
-                select(name="c")
-                    option(value="Red") красный
-                    option(value="Blue") синий
-                    option(value="Crimsom") малиновый
-                    option(value="Black") чёрный
-                    option(value="Green") чёрный
-                    option(value="Orange") чёрный
-                    option(value="White") чёрный
-                br
-                span добавить изображение:  
-                input(type="file", name="pic")
-                br
-                button(type="submit") Добавить
+        form#addProduct(method='POST')
+          span.nameForCss &Ncy;&acy;&zcy;&vcy;&acy;&ncy;&icy;&iecy; &tcy;&ocy;&vcy;&acy;&rcy;&acy; 
+          input#border-radius-css(type='text' name='name')
+          br
+          span.nameForCss &Bcy;&rcy;&ecy;&ncy;&dcy; 
+          input#border-radius-css(type='text' name='brand')
+          br
+          span.nameForCss &TScy;&iecy;&ncy;&acy; 
+          input#border-radius-css(type='text' name='price')
+          br
+          span.nameForCss &Kcy;&acy;&tcy;&iecy;&gcy;&ocy;&rcy;&icy;&yacy;
+          select#border-radius-css(name='Category')
+            option(value='SHORT') &SHcy;&ocy;&rcy;&tcy;&ycy;
+            option(value='T-SHIRT') &Fcy;&ucy;&tcy;&bcy;&ocy;&lcy;&kcy;&icy;
+            option(value='TROUSERS') &SHcy;&tcy;&acy;&ncy;&ycy;
+            option(value='JACKET') &Kcy;&ucy;&rcy;&tcy;&kcy;&icy;
+            option(value='SWEATERS') &Scy;&vcy;&icy;&tcy;&iecy;&rcy;&ycy;
+            option(value='HODDIES') &KHcy;&ucy;&dcy;&icy;
+            option(value='TROUSERS') &Bcy;&rcy;&yucy;&kcy;&icy;
+          br
+          span.nameForCss &Rcy;&acy;&zcy;&mcy;&iecy;&rcy; 
+          select#border-radius-css(name='Size')
+            option(value='S') S
+            option(value='M') M
+            option(value='L') L
+            option(value='L') XL
+            option(value='L') XXL
+          br
+          span.nameForCss &TScy;&vcy;&iecy;&tcy; 
+          select#border-radius-css(name='Color')
+            option(value='Red') &Kcy;&rcy;&acy;&scy;&ncy;&ycy;&jcy;
+            option(value='Blue') &Scy;&icy;&ncy;&icy;&jcy;
+            option(value='Crimsom') &Mcy;&acy;&lcy;&icy;&ncy;&ocy;&vcy;&ycy;&jcy;
+            option(value='Black') &CHcy;&iocy;&rcy;&ncy;&ycy;&jcy;
+            option(value='Green') &CHcy;&iocy;&rcy;&ncy;&ycy;&jcy;
+            option(value='Orange') &CHcy;&iocy;&rcy;&ncy;&ycy;&jcy;
+            option(value='White') &CHcy;&iocy;&rcy;&ncy;&ycy;&jcy;
+          br
+          span.nameForCss &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy; &icy;&zcy;&ocy;&bcy;&rcy;&acy;&zhcy;&iecy;&ncy;&icy;&iecy;: 
+          input(type='file' name='pic', id='noNamecss')
+          br
+          button#buttoncssadd(type='submit') &Dcy;&ocy;&bcy;&acy;&vcy;&icy;&tcy;&softcy;
             script(src="addDre.js")
