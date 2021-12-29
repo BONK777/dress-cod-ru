@@ -8,18 +8,6 @@ const readFile = (path) => {
 
 console.log(data);
 
-// const Product = (prArr) => {
-//     let names = data[0].split(";");
-//     names.forEach((name, idx) => {this[name] = prArr[idx]})
-// }
-
-// let first = Product(data[1].split(";"));
-// console.log(first);
-// const products = [];
-// for(let i = 1; i < data.length; i++) {
-//     products.push(Product(data[i].split(";")));
-// }
-
 const makeProducts = () => {
   return readFile("/../../data/fruit.csv")
     .split("\r\n")
@@ -40,12 +28,10 @@ const makeProducts = () => {
 };
 console.log(makeProducts())
 
-
-router.get("/", (req, res) => {
+router.get("/index", (req, res) => {
   res.render("index", {
     title: "DRESS-COD",
     products: makeProducts(),
-    // tableCaptions
   });
 });
 router.get("/admin", (req, res) => {
@@ -61,7 +47,6 @@ router.get("/adddre", (req, res) => {
   });
 });
 
-
 router.get("/t-shirt", (req, res) => {
   res.render("t-shirt", {
       title: "T-SHIRTS",
@@ -69,20 +54,12 @@ router.get("/t-shirt", (req, res) => {
   });
 });
 
-// router.get("/", (req, res) => {
-//   res.render("t-thirt", {
-//       title: "Футболки"
-//   });
-// });
-
-
 router.get("/hoodies", (req, res) => {
   res.render("hoodies", {
       title: "HOODIES",
       products: makeProducts(),
   });
 });
-
 
 router.get("/jacket", (req, res) => {
   res.render("jacket", {
@@ -118,6 +95,5 @@ router.get("/sweaters", (req, res) => {
       products: makeProducts(),
   });
 });
-
 
 module.exports = router;

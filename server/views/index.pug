@@ -2,11 +2,13 @@ extends layout
 
 block body
       div.box  
-            h2= title
+            .box-logo
+                  .logo-center
             .wrapper-header
                   header.header
                         .wrapper-logo
                               .logo
+                                    img(class="logo", src="image/logo/logoText.png")
                         nav.topnav
                               a.topnav-link(href='#about') &Ocy; &ncy;&acy;&scy;
                               a.topnav-link(href='#galary') &Gcy;&acy;&lcy;&iecy;&rcy;&iecy;&yacy;
@@ -41,12 +43,11 @@ block body
             div.items
                   each pr in products 
                         div.item
-                              img(class='img', src='image/'+pr.image)
+                              img(id="open", class='img', src='image/'+pr.image)
                               div(class='name') #{pr.name} 
                               div.cat #{pr.category}
                               div.brand #{pr.brand}
-                              div.price #{pr.price} ₽
-                              div.id(id="open") #{pr.id}     
+                              div.price #{pr.price} ₽     
                               button.buy(data-id= + pr.id) Купить
             .overlay 
                   .modal
@@ -57,5 +58,4 @@ block body
                         div.modal-price 16890 ₽     
                         button.modal-buy Купить
                               .close(id="close") &#x2716; 
-      script(src="./openProduct.js")                       
-                   
+      script(src="./openProduct.js")  

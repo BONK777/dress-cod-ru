@@ -20,6 +20,13 @@ h2
     color #5d02ff
     text-align center
     font-size 30px
+    // display block
+    
+.go-home
+  font-size 40px
+  width 150px
+  height 150px
+  color red
 
 &>h1
     color rgb(156, 88, 206)
@@ -227,17 +234,34 @@ h2
 
 .wrapper-logo {
 	width: 120px;
+  display: flex
 }
 
 .logo {
-	width: 55px;
-	height: 55px;
+	width: 150px;
+	height: 150px;
+  margin-top 3.5px
+  display flex
+  justify-content center
 	/*background-color: #FFEC00;*/
-	background-image: url(../img/logo.jpg);
+	// background-image: url(/logo/logoText.png);
 	background-size: cover;
 	background-position: center;
 
 }	
+
+.box-logo
+  display flex
+  justify-content center
+
+.logo-center
+  width 100px
+  height 100px
+  background-image url('./image/logo/logo2.png') 
+  box-sizing border-box
+  background-size cover
+  margin 10px
+  opacity 0.75
 
 .topnav-link {
 	text-decoration: none;
@@ -531,6 +555,41 @@ h2
   font-size: 26px;
   font-weight: 600;
 }
+
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    display: none;
+    opacity: 0;
+}
+
+.modal {
+    width: 800px;
+    height 800px
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    transform: translateY(-20px);
+    transition: 0.3s;
+
+}
+
+.close {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   cursor: pointer;
+}
+
 @media (max-width: 420px) {
   .sidebar.close .nav-links li .sub-menu{
     display: none;
