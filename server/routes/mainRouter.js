@@ -28,7 +28,7 @@ const makeProducts = () => {
 };
 console.log(makeProducts())
 
-router.get("/index", (req, res) => {
+router.get("/", (req, res) => {
   res.render("index", {
     title: "DRESS-COD",
     products: makeProducts(),

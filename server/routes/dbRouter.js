@@ -25,27 +25,6 @@ router.post("/add", (req, res) => {
     });
 })
 
-// router.get("/vegetables", (req, res) => {
-//     const client = db();
-//     client.connect(err => {
-//         if (err) {
-//             res.send({"msg": "Error connection"});
-//             client.close();
-//         } else {
-//             const table = client.db("dresscod");
-//             const col = table.collection("products");
-//             col.find({"type": "Овощи"}).toArray((error, data) => {
-//                 if (error) {
-//                     console.log(error);
-//                 }
-//                 console.log(data);
-//                 res.send({"data": data});
-//                 client.close();
-//             });
-//         }
-//     });
-// });
-
 router.get("/del/:id", (req, res) => {
     const client = db();
     client.connect((err) => {
